@@ -1,0 +1,4 @@
+city = "London"
+work = "school"
+group_worker = "group work2"
+print(city, work, group_worker, sep=" | ")
