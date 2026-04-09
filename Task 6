@@ -1,0 +1,9 @@
+import math
+a = float(input("1 основание: "))
+b = float(input("2 основание: "))
+h = float(input("Высота: "))
+
+c = math.sqrt(h**2 + ((a-b)/2)**2)
+perimeter = a + b + 2 * c
+
+print("Периметр:", perimeter)
