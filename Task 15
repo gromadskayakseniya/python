@@ -1,0 +1,8 @@
+x = float(input("1 сторона отверстия: "))
+y = float(input("2 сторона отверстия: "))
+if a <= 0 or b <= 0 or c <= 0 or x <= 0 or y <= 0:
+    print("Неверные данные")
+elif (a <= x and b <= y) or (a <= y and b <= x) or (a <= x and c <= y) or (a <= y and c <= x) or (b <= x and c <= y) or (b <= y and c <= x):
+    print("Пройдет")
+else:
+    print("Не пройдет")
