@@ -1,0 +1,15 @@
+apartment = int(input("Номер квартиры: "))
+
+number_of_apartments = 15 // 5  # 3 квартиры на каждом этаже
+if 0 < apartment <=3:
+    print("1 этаж")
+elif 3 < apartment <= 6:
+    print("2 этаж")
+elif 6 < apartment <= 9:
+    print("3 этаж")
+elif 9 < apartment <= 12:
+    print("4 этаж")
+elif 12 < apartment <= 15:
+    print("5 этаж")
+else:
+    print("Такой квартиры нет")
