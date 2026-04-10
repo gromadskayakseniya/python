@@ -1,8 +1,9 @@
 n = int(input("Количество школьников: "))
 k = float(input("Количество яблок: "))
-
-whole_apples = k // n
-rest = k % n
-
-print("Каждому школьнику достанется: ", whole_apples, "яблок")
-print("Останется в корзине:", rest, "яблок")
+if n < 0 or k < 0:
+    print("Неверные данные")
+else:
+    whole_apples = k // n
+    rest = k % n
+    print("Каждому школьнику достанется: ", whole_apples, "яблок")
+    print("Останется в корзине:", rest, "яблок")
