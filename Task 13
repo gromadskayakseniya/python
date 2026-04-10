@@ -1,7 +1,7 @@
 h = int(input("Часы: "))
 m = int(input("Минуты: "))
 s = int(input("Секунды: "))
-if 0 < h ≤ 23 and 0 ≤ m ≤ 59 and 0 ≤ s ≤ 59:
+if 0 < h <= 23 and 0 <= m <= 59 and 0 <= s <= 59:
     seconds_from_midnight = h * 3600 + m * 60 + s # сколько секунд прошло с полуночи
     seconds_total = 12 * 3600 # секунд в 12 часах
     angle = (seconds_from_midnight % seconds_total) * (360 / seconds_total)
