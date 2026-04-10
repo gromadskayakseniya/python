@@ -1,8 +1,9 @@
 apartment = int(input("Номер квартиры: "))
-
-number_of_apartments = 20 // 5  # 4 квартиры на каждом этаже
-floor = (apartment - 1) // number_of_apartments + 1
-position = (apartment - 1) % number_of_apartments + 1
-
-print("Этаж:", floor)
-print("По счету квартира является:", position)
+if apartment <= 0:
+    print("Такой квартиры нет")
+else:
+    number_of_apartments = 20 // 5  # 4 квартиры на каждом этаже
+    floor = (apartment - 1) // number_of_apartments + 1
+    position = (apartment - 1) % number_of_apartments + 1
+    print("Этаж:", floor)
+    print("По счету квартира является:", position)
