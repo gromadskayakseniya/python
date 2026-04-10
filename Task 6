@@ -2,8 +2,9 @@ import math
 a = float(input("1 основание: "))
 b = float(input("2 основание: "))
 h = float(input("Высота: "))
-
-c = math.sqrt(h**2 + ((a-b)/2)**2)
-perimeter = a + b + 2 * c
-
-print("Периметр:", perimeter)
+if a <= 0 or b <=0 or h <=0:
+    print("Неверные данные")
+else:
+    c = math.sqrt(h**2 + ((a-b)/2)**2)
+    perimeter = a + b + 2 * c
+    print("Периметр:", perimeter)
