@@ -1,0 +1,29 @@
+x1 = int(input("Левый нижний угол 1 прямоугольника (x): "))
+y1 = int(input("Левый нижний угол 1 прямоугольника (y): "))
+w1 = int(input("Ширина 1 прямоугольника: "))
+h1 = int(input("Высота 1 прямоугольника: "))
+x2 = int(input("Левый нижний угол 2 прямоугольника (x): "))
+y2 = int(input("Левый нижний угол 2 прямоугольника (y): "))
+w2 = int(input("Ширина 1 прямоугольника: "))
+h2 = int(input("Высота 1 прямоугольника: "))
+if w1 or w2 or h1 or h2 <= 0:
+    print("Неверные данные")
+else:
+    # границы прямоугольников
+    left1, right1 = x1, x1 + w1
+    bottom1, top1 = y1, y1 + h1
+
+    left2, right2 = x2, x2 + w2
+    bottom2, top2 = y2, y2 + h2
+
+    all_first_in_second = (left2 <= left1 and right1 <= right2 and 
+                            bottom2 <= bottom1 and top1 <= top2)
+    print("Все точки первого принадлежат второму:", all_first_in_second)
+
+    all_second_in_first = (left1 <= left2 and right2 <= right1 and 
+                            bottom1 <= bottom2 and top2 <= top1)
+    one_in_another = all_first_in_second or all_second_in_first
+    print("Один прямоугольник полностью внутри другого:", one_in_another)
+
+    intersection = not (right1 < left2 or right2 < left1 or top1 < bottom2 or top2 < bottom1)
+    print("Прямоугольники пересекаются:", intersection)
