@@ -1,0 +1,7 @@
+N = int(input("Введите N: "))
+summary = 0
+
+for i in range(1, N + 1):
+    summary += i
+
+print("Сумма чисел от 1 до", N, "равна:", summary)
