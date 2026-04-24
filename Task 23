@@ -1,0 +1,28 @@
+m = int(input("Номер масти карты от 1 до 4: "))  
+k = int(input("Номер достоинства карты от 6 до 14: "))  
+
+if k == 11:
+    rank = "валет"
+elif k == 12:
+    rank = "дама"
+elif k == 13:
+    rank = "король"
+elif k == 14:
+    rank = "туз"
+elif k < 6 or k > 14:
+    print("Неверные данные")
+else:
+     rank = str(k)
+
+if m == 1:
+    suit = "пик"
+elif m == 2:
+    suit = "треф"
+elif m == 3:
+    suit = "бубен"
+elif m < 1 or m > 4:
+    print("Неверные данные")
+else:
+    suit = "черв"
+
+print("Карта:", rank, suit)
