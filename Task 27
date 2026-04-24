@@ -1,0 +1,8 @@
+N = int(input("Сколько раз вводилось число: "))
+
+for i in range(N):
+    x = int(input("Введите число: "))
+    if x % 2 == 0:
+        print("четное")
+    else:
+        print("нечетное")
