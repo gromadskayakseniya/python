@@ -1,0 +1,12 @@
+x1 = float(input("Первое число: "))
+x2 = float(input("Второе число: "))
+
+import math
+sqrt_x2 = math.sqrt(x2)
+
+if sqrt_x2 < x1:
+    x2 = x2 * 5
+
+print("Первое число:", x1)
+print("Квадратный корень из второго:", sqrt_x2)
+print("Второе число после проверки:", x2)
