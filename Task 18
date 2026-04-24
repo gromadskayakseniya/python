@@ -1,0 +1,7 @@
+a = float(input("1 сторона: "))
+b = float(input("2 сторона: "))
+c = float(input("3 сторона: "))
+if (a + b > c) and (a + c > b) and (b + c > a):
+    print("Треугольник существует")
+else:
+    print("Треугольник не существует")
