@@ -1,0 +1,16 @@
+n = int(input("Год: "))
+
+animals = ["Крыса", "Корова", "Тигр", "Заяц", "Дракон", "Змея",
+           "Лошадь", "Овца", "Обезьяна", "Петух", "Собака", "Свинья"]
+
+colors = ["Зеленый", "Красный", "Желтый", "Белый", "Черный"]
+
+first_year = 1984
+
+animal_index = (n - base_year) % 12
+color_index = ((n - base_year) // 2) % 5
+
+animal = animals[animal_index]
+color = colors[color_index]
+
+print(f"{n} год: {animal}, {color}")
