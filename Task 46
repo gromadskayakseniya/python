@@ -1,0 +1,12 @@
+N = int(input("Введите число: "))
+if N > 0:
+    for digit in range(10):
+        count = 0
+        temp = N
+        while temp > 0:
+            if temp % 10 == digit:
+                count += 1
+            temp //= 10
+        print(f"{digit}: {count}")
+else:
+    print("Неверные данные")
