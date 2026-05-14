@@ -1,0 +1,7 @@
+num = 10
+while num < 100:
+    a = num // 10
+    b = num % 10
+    if (a + b) ** 2 == num:
+        print(num)
+    num += 1
