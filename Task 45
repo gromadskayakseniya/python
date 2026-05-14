@@ -1,0 +1,19 @@
+N = int(input("Введите число: "))
+result = 10 
+for digit in range(10):
+    # сколько раз встречается текущая цифра
+    count = 0
+    temp = N
+    while temp > 0:
+        if temp % 10 == digit:
+            count += 1
+        temp //= 10
+    
+    # Если цифра встречается ровно один раз и она меньше текущего результата
+    if count == 1 and digit < result:
+        result = digit
+
+if result == 10:
+    print("нет")
+else:
+    print(result)
