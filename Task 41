@@ -1,0 +1,11 @@
+N = int(input("Введите число: "))
+max_number = 0
+if N > 0:
+    while N > 0:
+        number = N % 10
+        if number > max_number:
+            max_number = number
+        N //= 10
+    print(max_number)
+else:
+    print("Неверные данные")
