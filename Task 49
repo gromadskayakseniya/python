@@ -1,0 +1,17 @@
+N = int(input("Введите число: "))
+
+increase = True
+prev_digit = -1
+
+while N > 0:
+    current_digit = N % 10
+    if prev_digit != -1 and current_digit >= prev_digit:
+        increase = False
+        break
+    prev_digit = current_digit
+    N //= 10
+
+if increase:
+    print("Да")
+else:
+    print("Нет")
