@@ -1,0 +1,8 @@
+a = int(input("Введите число: "))
+b = int(input("Введите число: "))
+if a and b > 0:
+    while b != 0:
+        a, b = b, a % b
+    print(a)
+elif a or b <= 0:
+    print("Неверные данные")
