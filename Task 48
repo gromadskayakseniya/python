@@ -1,0 +1,23 @@
+N = int(input("Введите число: "))
+
+max_length = 1
+current_length = 1
+prev_digit = -1
+
+# последняя цифра
+temp = N
+prev_digit = temp % 10
+temp //= 10
+
+while temp > 0:
+    current_digit = temp % 10
+    if current_digit == prev_digit:
+        current_length += 1
+        if current_length > max_length:
+            max_length = current_length
+    else:
+        current_length = 1
+    prev_digit = current_digit
+    temp //= 10
+
+print(max_length)
