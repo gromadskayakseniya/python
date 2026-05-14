@@ -1,0 +1,14 @@
+N = int(input("Введите число: "))
+if N < 2:
+    print("Нет")
+else:
+    prime = True
+    for i in range(2, int(N ** 0.5) + 1):
+        if N % i == 0:
+            prime = False
+            break
+    
+    if prime:
+        print("Да")
+    else:
+        print("Нет")
