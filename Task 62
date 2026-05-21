@@ -1,0 +1,16 @@
+N = int(input("Введите число: "))
+a = list(map(int, input().split()))
+
+count = {}
+for x in a:
+    count[x] = count.get(x, 0) + 1
+
+result = []
+for x in a:
+    if count[x] == 1 and x not in result:
+        result.append(x)
+
+if result:
+    print(' '.join(map(str, result)))
+else:
+    print("nо")
