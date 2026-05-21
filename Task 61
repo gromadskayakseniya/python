@@ -1,0 +1,21 @@
+def is_palindrome(arr):
+    return arr == arr[::-1]
+
+N = int(input("Введите число: "))
+a = list(map(int, input().split()))
+
+found = False
+
+if is_palindrome(a):
+    found = True
+else:
+    for i in range(N):
+        new_list = a[:i] + a[i+1:]
+        if is_palindrome(new_list):
+            found = True
+            break
+
+if found:
+    print("Да")
+else:
+    print("Нет")
