@@ -1,0 +1,23 @@
+N = int(input("Введите число: "))
+a = list(map(int, input().split()))
+
+count = {}
+first_occurrence = {}
+
+for i, x in enumerate(a):
+    count[x] = count.get(x, 0) + 1
+    if x not in first_occurrence:
+        first_occurrence[x] = i
+
+max_count = -1
+best_element = None
+
+for x in a:
+    if count[x] > max_count:
+        max_count = count[x]
+        best_element = x
+    elif count[x] == max_count:
+        if first_occurrence[x] < first_occurrence[best_element]:
+            best_element = x
+
+print(best_element)
