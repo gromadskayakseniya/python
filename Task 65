@@ -1,0 +1,20 @@
+N = int(input("Введите число: "))
+a = list(map(int, input().split()))
+
+count = {}
+for x in a:
+    count[x] = count.get(x, 0) + 1
+
+unique = []
+duplicate = []
+
+for x in a:
+    if count[x] == 1:
+        if x not in unique:
+            unique.append(x)
+    else:
+        if x not in duplicate:
+            duplicate.append(x)
+
+result = unique + duplicate
+print(' '.join(map(str, result)))
