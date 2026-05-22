@@ -1,0 +1,12 @@
+from collections import Counter
+
+N = int(input("Введите число: "))
+x = list(map(int, input().split()))
+
+freq = Counter(x)
+max_freq = max(freq.values())
+
+if max_freq <= (N + 1) // 2:
+    print("Да")
+else:
+    print("Нет")
