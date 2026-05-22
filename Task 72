@@ -1,0 +1,12 @@
+N = int(input("Введите число: "))
+list1 = list(map(int, input().split()))
+list2 = list(map(int, input().split()))
+
+found = False
+for shift in range(N):
+    rotated = list1[shift:] + list1[:shift]
+    if rotated == list2:
+        found = True
+        break
+
+print("Да" if found else "Нет")
