@@ -1,0 +1,14 @@
+N = int(input("Введите число: "))
+x = list(map(int, input().split()))
+
+total_sum = sum(x)
+left_sum = 0
+
+found = False
+for i in range(N - 1):
+    left_sum += x[i]
+    if left_sum == total_sum - left_sum:
+        found = True
+        break
+
+print("Да" if found else "Нет")
