@@ -1,0 +1,12 @@
+N = int(input("Введите число: "))
+x = list(map(int, input().split()))
+
+max_len = 0
+for i in range(N):
+    current_sum = 0
+    for j in range(i, N):
+        current_sum += x[j]
+        if current_sum == 0:
+            max_len = max(max_len, j - i + 1)
+
+print(max_len)
