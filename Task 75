@@ -1,0 +1,15 @@
+N = int(input("Введите число: "))
+x = list(map(int, input().split()))
+
+max_len = 0
+seen = set()
+left = 0
+
+for right in range(N):
+    while x[right] in seen:
+        seen.remove(x[left])
+        left += 1
+    seen.add(x[right])
+    max_len = max(max_len, right - left + 1)
+
+print(max_len)
